@@ -1,0 +1,25 @@
+{
+  "name": "ai-sandbox",
+  "version": "1.0.0",
+  "description": "myfirstrepo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/15brewerb-dev/AI-Sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/15brewerb-dev/AI-Sandbox/issues"
+  },
+  "homepage": "https://github.com/15brewerb-dev/AI-Sandbox#readme",
+  "dependencies": {
+    "dotenv": "^18.0.0",
+    "openai": "^7.19.0"
+  }
+}
