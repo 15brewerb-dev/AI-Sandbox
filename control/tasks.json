@@ -1,0 +1,54 @@
+{
+  "goal": {
+    "name": "First repeatable AI-driven revenue system",
+    "primaryMetric": "paid_pilots",
+    "target": 1,
+    "current": 0
+  },
+  "tasks": [
+    {
+      "id": "T-001",
+      "title": "Validate HVAC Lead Rescue experiment",
+      "department": "Factory",
+      "owner": "manager",
+      "status": "working",
+      "experiment": "HVAC Lead Rescue",
+      "successCondition": "A real HVAC business agrees to a paid pilot or gives specific rejection feedback.",
+      "nextAction": "Finish demo, then expose it to real prospects.",
+      "costLimitUsd": 25
+    },
+    {
+      "id": "T-002",
+      "title": "Define hard Market Evidence filters",
+      "department": "Research Lab",
+      "owner": "reviewer",
+      "status": "inbox",
+      "experiment": "Core System",
+      "successCondition": "Researcher can reject weak ideas using measurable evidence instead of vibes.",
+      "nextAction": "Create the first evidence rubric.",
+      "costLimitUsd": 2
+    },
+    {
+      "id": "T-003",
+      "title": "Add Distribution Analysis stage",
+      "department": "Distribution",
+      "owner": "sales-agent",
+      "status": "inbox",
+      "experiment": "Core System",
+      "successCondition": "Every validated opportunity includes how competitors acquire customers and where we can test distribution cheaply.",
+      "nextAction": "Define distribution research output.",
+      "costLimitUsd": 2
+    },
+    {
+      "id": "T-004",
+      "title": "Create War Room experiment scorecard",
+      "department": "Strategy",
+      "owner": "war-room",
+      "status": "inbox",
+      "experiment": "Core System",
+      "successCondition": "Experiments can be compared using spend, replies, conversations, pilots, revenue, and time.",
+      "nextAction": "Define scorecard fields and kill/continue/scale rules.",
+      "costLimitUsd": 1
+    }
+  ]
+}
