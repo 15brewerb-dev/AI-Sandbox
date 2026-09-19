@@ -6,8 +6,7 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-const goal =
-  "Find 3 realistic ways I could use AI to make money online within 30 days with a small startup budget.";
+const goal = process.argv.slice(2).join(" ");
 
 async function main() {
   const response = await client.responses.create({
@@ -37,4 +36,4 @@ Keep the answer clear and practical.
   console.log(response.output_text);
 }
 
-main();
+main()
