@@ -1,0 +1,231 @@
+
+=== RESEARCH RESULTS ===
+
+## 1. “48-hour lead-capture website” for Columbus plumbers
+
+**Exact opportunity:** Build a one-page mobile website with click-to-call, quote-request form, service areas, FAQs, and automated SMS/email follow-up for plumbers that currently have no website.
+
+**Who would pay:**  
+T.Bayless Plumbing and Handyman Services, Affordable Plumbing, Heinmiller Plumbing Co., Aqua-Flo Plumbing & Mechanical, Ace Plumbing Sewer & Drain, H & M Plumbing Co., MM Plumbing Co., Buckeye Plumbing Co., Columbus Plumbing Company, and Joe Coffman Plumbing.
+
+**Why the problem is real:**  
+These businesses appear in a current Columbus list of active businesses with **no website on their Google Business Profile**. A missing website makes it harder for property managers and homeowners to verify services, request quotes, or contact the business after hours. ([localvein.com](https://localvein.com/businesses-without-websites/oh/columbus-city))
+
+**Evidence found:**  
+LocalVein’s April 2026 scan identifies 25 Columbus businesses without websites and specifically lists the companies above. It says the records are based on live business data and are re-checked regularly. ([localvein.com](https://localvein.com/businesses-without-websites/oh/columbus-city))
+
+**Startup cost:** $0–$50  
+Use Carrd, Google Forms, Calendly, Gmail, and a free/low-cost SMS tool. The client should pay for the domain.
+
+**Time to first revenue:** 7–14 days
+
+**Approximate price:**  
+$400–$750 setup, plus $50–$150/month for edits and lead follow-up.
+
+**First 3 actions to test it:**
+1. Create a sample plumbing landing page for **T.Bayless Plumbing and Handyman Services** using its name, services, service area, and a quote form.
+2. Call or visit five listed plumbers and show them how a customer currently has no obvious website path from Google.
+3. Offer a discounted “first installation” at $400, with payment required before publishing.
+
+---
+
+## 2. Review-response and reactivation system for underperforming med spas
+
+**Exact opportunity:** Install an AI-assisted system that drafts review responses, flags negative reviews for fast owner approval, requests reviews from recent satisfied customers, and reactivates inactive patients by email or SMS.
+
+**Who would pay:**  
+Pleij Med Spa, Pretty Lyfe, Results Health and Wellness Clinic, Central Ohio Nutrition Center, THE ARMORY, and OhioHealth Weight Management.
+
+**Why the problem is real:**  
+These Columbus-area businesses show weaker public ratings than the dominant local med-spa market. Lower ratings and unanswered or poorly handled reviews can reduce consultation bookings, especially for high-ticket services such as weight loss, injectables, and aesthetic treatments.
+
+**Evidence found:**  
+A current Columbus med-spa directory shows Pleij Med Spa at 3.9 stars from 44 reviews, Pretty Lyfe at 4.5 from 26, Results Health and Wellness Clinic at 4.3 from 18, THE ARMORY at 4.2 from 46, and Central Ohio Nutrition Center at 3.9 from 9. The same directory reports 204 Columbus med-spa providers and more than 19,000 patient reviews, indicating a competitive reputation-driven market. ([nobsmedspareviews.com](https://www.nobsmedspareviews.com/city/columbus))
+
+**Startup cost:** $0–$75  
+Use Google Sheets, ChatGPT, Gmail, Google Forms, and optionally a low-cost texting platform.
+
+**Time to first revenue:** 7–14 days
+
+**Approximate price:**  
+$500–$1,000 for a 30-day reputation and reactivation setup; $200–$400/month ongoing.
+
+**First 3 actions to test it:**
+1. Audit 20 recent Google reviews for Pleij Med Spa and prepare five example responses—without publishing anything.
+2. Create a one-page report showing rating, review count, response gaps, and a sample patient reactivation message.
+3. Contact the owner or practice manager with a fixed offer: “I’ll organize and respond to your review backlog and build a compliant follow-up workflow for $500.”
+
+---
+
+## 3. Google Business Profile launch package for new Columbus wellness businesses
+
+**Exact opportunity:** Set up and optimize Google Business Profiles for newly listed or low-review med spas, weight-loss clinics, wellness practices, and day spas, including service categories, descriptions, photos, FAQs, appointment links, weekly posts, and an automated review-request process.
+
+**Who would pay:**  
+Open Sky Day Spa, Blue Sky Med Spa, Fatou Aesthetics + Wellness, em+zen, Routine Med Spa, Gold Bar Aesthetics, Columbus Weight Loss & Wellness, Beechwold Weight Loss Clinic, and The Luxe Medspa Aesthetics & Bodycare.
+
+**Why the problem is real:**  
+Many of these businesses appear to have little or no review history in current local listings. A new or weak Google profile makes discovery and trust harder, even when the business offers high-margin services.
+
+**Evidence found:**  
+The current Columbus directory lists numerous local businesses with **zero recorded reviews**, including Open Sky Day Spa, Blue Sky Med Spa, Fatou Aesthetics + Wellness, em+zen, Routine Med Spa, Gold Bar Aesthetics, Columbus Weight Loss & Wellness, and Beechwold Weight Loss Clinic. It also lists The Luxe Medspa Aesthetics & Bodycare as a Columbus provider. ([nobsmedspareviews.com](https://www.nobsmedspareviews.com/city/columbus))
+
+**Startup cost:** $0–$50  
+Use Google Business Profile, Canva, ChatGPT, Google Drive, and a simple review-request form.
+
+**Time to first revenue:** 7–14 days
+
+**Approximate price:**  
+$350–$700 setup, plus $100–$250/month for posts, photo updates, review requests, and reporting.
+
+**First 3 actions to test it:**
+1. Choose three businesses with zero listed reviews and verify their profiles manually in Google Search/Maps.
+2. Build a free “before/after” audit showing missing services, weak descriptions, absent FAQs, incomplete booking links, and lack of recent posts.
+3. Offer a seven-day implementation package for $350, requiring the owner to provide photos, service details, and access before work begins.
+
+=== REVIEWER RESULT ===
+
+## 1. Winner
+
+**48-hour lead-capture websites for Columbus plumbers**
+
+## 2. Why it wins
+
+- **Lowest complexity and risk:** No sensitive healthcare data, medical claims, or review-policy compliance issues.
+- **Fastest path to revenue:** A working demo can be built in hours and sold as a fixed-price service.
+- **Clear, tangible value:** More calls and quote requests from customers who cannot easily find information online.
+- **Simple fulfillment:** One landing page, form, click-to-call button, and basic follow-up system.
+- **Easy prospecting:** Businesses without websites are identifiable and have an obvious gap.
+- **Strong AI fit:** AI can accelerate copywriting, FAQs, service-area pages, follow-up messages, and personalization.
+- **Good economics:** Low tool costs, $400–$750 upfront, and optional recurring maintenance revenue.
+
+## 3. Biggest weakness
+
+**The prospect list may be inaccurate or outdated, and some plumbers may rely heavily on referrals or Facebook instead of wanting a website.** Verify each business manually before contacting them and sell the outcome—more calls and quote requests—not merely “a website.”
+
+## 4. First 3 actions to validate it
+
+1. **Manually verify 10 prospects** in Google Maps: confirm no website, active phone number, service area, and apparent business activity.
+2. **Build one polished demo** for a real prospect using clearly labeled sample content and a working quote form.
+3. **Contact 10 owners** by phone, in person, or personalized message; offer a $400 founding-client package with payment before publishing, and track responses, objections, and closes.
+
+=== OFFER BUILDER RESULT ===
+
+## 1. Offer name
+
+**Columbus Plumber Lead Page — Live in 48 Hours**
+
+## 2. Who it is for
+
+Independent plumbers and small plumbing companies in Columbus, Ohio that:
+
+- Have no website or an outdated one
+- Depend mainly on referrals, Google Maps, or Facebook
+- Want more phone calls and quote requests
+- Serve a defined local area
+- Can respond promptly to new leads
+
+## 3. The exact problem it solves
+
+When a potential customer searches for a plumber, they often cannot quickly see:
+
+- What services the plumber offers
+- Which areas they serve
+- How to call or request a quote
+- Why they should choose that business
+
+The offer gives the plumber one clear, mobile-friendly page designed to turn local search traffic and referrals into phone calls and quote requests.
+
+## 4. Deliverables
+
+A completed lead-capture website delivered within 48 hours of receiving the required information:
+
+- One mobile-friendly landing page
+- Business name, phone number, service area, and hours
+- Click-to-call button
+- Quote-request form
+- Service sections, such as:
+  - Emergency plumbing
+  - Drain cleaning
+  - Water heater repair
+  - Leak repair
+  - Sewer or pipe services
+- Short “Why choose us” section
+- Frequently asked questions
+- Basic local SEO title and description
+- Form notifications sent to the owner’s email
+- Basic thank-you message after form submission
+- One revision round
+- Simple instructions for updating contact details
+
+Optional: connect the page to the customer’s existing domain or provide a low-cost temporary web address.
+
+## 5. Price
+
+### Founding-client price: **$497 one time**
+
+Optional ongoing support:
+
+- **$49/month** for hosting, minor text changes, form checks, and basic maintenance
+
+The customer can also host it independently after delivery if preferred.
+
+## 6. Why the price makes sense
+
+The customer is not buying “a website.” They are buying a simple way for existing interest to become a call or quote request.
+
+One additional plumbing job may cover the entire project cost. The fixed price is affordable for a small local business while covering:
+
+- Copywriting
+- Page design
+- Mobile setup
+- Form configuration
+- Publishing
+- Revisions
+- Basic technical setup
+
+The limited scope keeps fulfillment fast and avoids the cost of a traditional multi-page website.
+
+## 7. Simple guarantee or risk-reversal
+
+**48-hour delivery promise:** Once the business provides its logo, contact details, service list, and preferred service areas, the first version will be ready within 48 hours or the customer receives $50 off.
+
+Also include:
+
+**Approval-based payment:** The page is built as a preview first. The customer pays the remaining balance before it is published.
+
+This avoids promising a specific number of leads or calls.
+
+## 8. Short sales pitch
+
+> You may be losing plumbing jobs because customers cannot quickly find your services, service area, or a way to contact you. I build simple, mobile-friendly lead pages for Columbus plumbers in 48 hours, with click-to-call buttons and quote forms included. The founding-client price is $497, and you approve the page before it goes live.
+
+## 9. Short outreach message
+
+> Hi [Name], I found [Business Name] while looking for plumbers in [area]. It looks like you may not have a dedicated website or quote-request page, so customers may have trouble seeing your services and contacting you quickly.  
+>   
+> I build simple mobile-friendly lead pages for Columbus plumbers in 48 hours, including click-to-call and quote forms. I’m offering a founding-client rate of $497 for the first few businesses.  
+>   
+> I can send you a free sample layout using your business name and services—no obligation.
+
+For phone outreach:
+
+> Hi, is this the owner? I help local plumbers turn Google and referral traffic into calls with a simple lead page that can be live in 48 hours. I noticed [specific observation]. Could I text or email you a quick sample for your business?
+
+## 10. Fastest way to create a sample or demo
+
+1. Pick one verified Columbus plumbing prospect with no website or a weak online presence.
+2. Use a simple builder such as Carrd, Framer, Wix, or WordPress.
+3. Create one page with:
+   - Their business name
+   - Clearly labeled sample content
+   - Click-to-call button
+   - Three to five service sections
+   - Service-area list
+   - Quote form
+   - “Sample concept— not the official website” notice
+4. Use a generic stock image or an image supplied by the business—do not imply endorsements or fabricate reviews.
+5. Publish it on a temporary URL.
+6. Send the prospect a screenshot and live preview with a short message:
+
+> I made this quick sample to show what your customers could see on mobile. If you like the direction, I can customize it with your real information and have it ready within 48 hours for $497.

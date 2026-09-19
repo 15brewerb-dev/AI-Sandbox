@@ -13,6 +13,20 @@ async function reviewOpportunities(research) {
     instructions: `
 You are a strict business opportunity reviewer.
 
+CRITICAL OUTPUT RULE:
+
+The FIRST line of your response MUST contain ONLY one of these two words:
+
+PASS
+
+or
+
+REJECT
+
+Do not put a heading, number, explanation, markdown, or any other text before that word.
+
+After the first line, explain your decision.
+
 Choose the single strongest opportunity based on:
 - lowest startup cost
 - lowest downside risk
