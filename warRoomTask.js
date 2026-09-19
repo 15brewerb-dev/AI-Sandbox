@@ -24,17 +24,7 @@ function updateTask(id, patch) {
   saveTasks(data);
 }
 
-async function runWarRoomTask() {
-  const id = "T-004";
-
-  console.log("\n=== T-004 STARTED ===\n");
-  updateTask(id, {
-    status: "working",
-    nextAction: "War Room is building the experiment scorecard and stop/scale rules."
-  });
-
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-
+async function createScorecard(feedback = "") {
   const response = await client.responses.create({
     model: "gpt-5.6-luna",
     reasoning: { effort: "low" },
@@ -61,15 +51,18 @@ Track at minimum:
 
 Create:
 1. Required scorecard fields.
-2. Kill rules.
-3. Continue rules.
-4. Scale rules.
+2. Concrete numeric/default kill rules.
+3. Concrete numeric/default continue rules.
+4. Concrete numeric/default scale rules.
 5. Human approval gates for spending.
 6. Default budget caps for research, prototype/demo, and validation.
 7. A simple experiment decision formula the Manager can apply.
-8. Special rules for experiments with zero replies, weak evidence, or expensive fulfillment.
+8. Special rules for zero replies, weak evidence, and expensive fulfillment.
+9. A runway rule that explicitly protects the roughly $200 total remaining budget.
 
 The system should favor fast, cheap real-world validation and should not keep weak experiments alive because time was already spent on them.
+
+If reviewer feedback is provided, fix every issue it identifies.
 
 Return:
 - SCORECARD
@@ -82,18 +75,14 @@ Return:
 
 Keep it practical and concise.
 `,
-    input: "Create the first War Room experiment scorecard."
+    input: feedback
+      ? "Revise the War Room scorecard using this Manager feedback:\n\n" + feedback
+      : "Create the first War Room experiment scorecard."
   });
+  return response.output_text;
+}
 
-  const output = response.output_text;
-  fs.writeFileSync(path.join(OUTPUT_DIR, "T-004-war-room-scorecard.txt"), output);
-
-  updateTask(id, {
-    status: "review",
-    nextAction: "Manager is reviewing the War Room scorecard.",
-    outputFile: "control/outputs/T-004-war-room-scorecard.txt"
-  });
-
+async function reviewScorecard(output) {
   const review = await client.responses.create({
     model: "gpt-5.6-luna",
     reasoning: { effort: "low" },
@@ -104,33 +93,76 @@ PASS only if it:
 - tracks both money and real-world traction,
 - has concrete kill/continue/scale rules,
 - includes budget caps and human approval gates,
-- protects a roughly $200 total runway,
+- explicitly protects a roughly $200 total runway,
 - avoids sunk-cost thinking,
 - is reusable across different business experiments.
 
 First line must be exactly PASS or REJECT.
-Then give a concise reason.
+Then give a concise reason naming every missing requirement.
 `,
     input: output
   });
+  return review.output_text;
+}
 
-  const managerReview = review.output_text;
-  fs.writeFileSync(path.join(OUTPUT_DIR, "T-004-manager-review.txt"), managerReview);
+async function runWarRoomTask() {
+  const id = "T-004";
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
-  const passed = managerReview.trim().toUpperCase().startsWith("PASS");
+  console.log("\n=== T-004 STARTED ===\n");
+  updateTask(id, {
+    status: "working",
+    nextAction: "War Room is building and self-revising the experiment scorecard."
+  });
+
+  let output = "";
+  let managerReview = "";
+  let passed = false;
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    console.log("Attempt " + attempt + "...");
+    output = await createScorecard(attempt === 1 ? "" : managerReview);
+
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, "T-004-war-room-scorecard.txt"),
+      output
+    );
+
+    updateTask(id, {
+      status: "review",
+      nextAction: "Manager is reviewing War Room scorecard attempt " + attempt + ".",
+      outputFile: "control/outputs/T-004-war-room-scorecard.txt"
+    });
+
+    managerReview = await reviewScorecard(output);
+
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, "T-004-manager-review.txt"),
+      managerReview
+    );
+
+    passed = managerReview.trim().toUpperCase().startsWith("PASS");
+
+    if (passed) break;
+
+    if (attempt < 3) {
+      updateTask(id, {
+        status: "working",
+        nextAction: "War Room is revising the scorecard from Manager feedback."
+      });
+    }
+  }
 
   updateTask(id, {
     status: passed ? "done" : "inbox",
     nextAction: passed
       ? "Use this scorecard to evaluate every active experiment before additional spend."
-      : "Revise the scorecard using the Manager review, then resubmit.",
+      : "Needs human review after three automatic revision attempts.",
     managerDecision: passed ? "PASS" : "REJECT",
     reviewFile: "control/outputs/T-004-manager-review.txt"
   });
 
-  console.log("\n=== T-004 " + (passed ? "DONE" : "REJECTED") + " ===\n");
-  console.log("Output: control/outputs/T-004-war-room-scorecard.txt");
-  console.log("Review: control/outputs/T-004-manager-review.txt\n");
+  console.log("\n=== T-004 " + (passed ? "DONE" : "NEEDS HUMAN REVIEW") + " ===\n");
 }
 
 runWarRoomTask().catch((err) => {
