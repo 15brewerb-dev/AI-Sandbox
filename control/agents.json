@@ -1,0 +1,174 @@
+{
+  "agents": [
+    {
+      "id": "manager",
+      "name": "Manager",
+      "department": "Command",
+      "status": "active",
+      "role": "Owns the goal, assigns work, checks progress, and escalates blockers.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "task-routing",
+        "system-state",
+        "agent-delegation"
+      ],
+      "successMetric": "Tasks move toward validated revenue without unnecessary spend.",
+      "budgetUsdPerTask": 0.25,
+      "requiresApprovalFor": [
+        "spend",
+        "external-contact",
+        "new-account",
+        "publishing"
+      ]
+    },
+    {
+      "id": "researcher",
+      "name": "Researcher",
+      "department": "Research Lab",
+      "status": "active",
+      "role": "Finds markets with observable demand and real-world evidence.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "web-search",
+        "market-research"
+      ],
+      "successMetric": "Returns evidence-backed opportunities that meet hard filters.",
+      "budgetUsdPerTask": 0.35,
+      "requiresApprovalFor": []
+    },
+    {
+      "id": "reviewer",
+      "name": "Evidence Reviewer",
+      "department": "Research Lab",
+      "status": "active",
+      "role": "Rejects weak opportunities and verifies that claims are supported.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "analysis",
+        "quality-gate"
+      ],
+      "successMetric": "Weak ideas are killed before build time or money is wasted.",
+      "budgetUsdPerTask": 0.2,
+      "requiresApprovalFor": []
+    },
+    {
+      "id": "offer-builder",
+      "name": "Offer Builder",
+      "department": "Factory",
+      "status": "active",
+      "role": "Turns validated demand into a concrete sellable offer.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "offer-design",
+        "pricing-draft"
+      ],
+      "successMetric": "Produces a testable offer with a clear buyer, result, price, and pilot.",
+      "budgetUsdPerTask": 0.25,
+      "requiresApprovalFor": []
+    },
+    {
+      "id": "prospector",
+      "name": "Prospector",
+      "department": "Distribution",
+      "status": "active",
+      "role": "Finds real prospects that match the validated offer.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "web-search",
+        "prospect-research"
+      ],
+      "successMetric": "Finds qualified prospects using public evidence without inventing problems.",
+      "budgetUsdPerTask": 0.35,
+      "requiresApprovalFor": [
+        "external-contact"
+      ]
+    },
+    {
+      "id": "sales-agent",
+      "name": "Sales Agent",
+      "department": "Distribution",
+      "status": "active",
+      "role": "Builds personalized outreach and sales angles from verified prospect data.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "outreach-drafting",
+        "objection-handling"
+      ],
+      "successMetric": "Creates outreach that earns replies and conversations.",
+      "budgetUsdPerTask": 0.2,
+      "requiresApprovalFor": [
+        "external-contact"
+      ]
+    },
+    {
+      "id": "demo-builder",
+      "name": "Demo Builder",
+      "department": "Factory",
+      "status": "active",
+      "role": "Builds the smallest convincing demo needed to test willingness to pay.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "demo-design",
+        "workflow-design"
+      ],
+      "successMetric": "A prospect can understand the value in under three minutes.",
+      "budgetUsdPerTask": 0.25,
+      "requiresApprovalFor": [
+        "spend",
+        "publishing"
+      ]
+    },
+    {
+      "id": "war-room",
+      "name": "War Room",
+      "department": "Strategy",
+      "status": "planned",
+      "role": "Measures experiments, identifies waste, and recommends kill, continue, or scale decisions.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "experiment-review",
+        "cost-review",
+        "pivot-analysis"
+      ],
+      "successMetric": "Resources move away from weak experiments and toward proven ones.",
+      "budgetUsdPerTask": 0.2,
+      "requiresApprovalFor": [
+        "kill-experiment",
+        "increase-budget"
+      ]
+    },
+    {
+      "id": "treasury",
+      "name": "Treasury",
+      "department": "Finance",
+      "status": "planned",
+      "role": "Tracks API, software, ad, and operating costs against experiment results.",
+      "model": "gpt-5.6-luna",
+      "abilities": [
+        "cost-tracking",
+        "budget-guardrails"
+      ],
+      "successMetric": "Experiments stay inside approved budgets and cost is visible.",
+      "budgetUsdPerTask": 0.1,
+      "requiresApprovalFor": [
+        "spend"
+      ]
+    },
+    {
+      "id": "archives",
+      "name": "Archives",
+      "department": "Memory",
+      "status": "planned",
+      "role": "Stores decisions, outputs, results, failures, and lessons so the system does not repeat mistakes.",
+      "model": "none",
+      "abilities": [
+        "memory",
+        "history",
+        "retrieval"
+      ],
+      "successMetric": "Every important decision and experiment result is recoverable.",
+      "budgetUsdPerTask": 0,
+      "requiresApprovalFor": []
+    }
+  ]
+}
