@@ -1,0 +1,3 @@
+PASS
+
+It requires auditable evidence, explicitly separates observed facts, reported claims, inferences, and hypotheses, prioritizes low-cost manual validation, defines a concrete 25–50 prospect first test, and provides measurable kill/continue/scale thresholds. It also includes a reusable output schema, $200 spend ceiling, approval gates, compliance stop-loss rules, and operational constraints.

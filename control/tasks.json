@@ -22,33 +22,45 @@
       "title": "Define hard Market Evidence filters",
       "department": "Research Lab",
       "owner": "reviewer",
-      "status": "inbox",
+      "status": "done",
       "experiment": "Core System",
       "successCondition": "Researcher can reject weak ideas using measurable evidence instead of vibes.",
-      "nextAction": "Create the first evidence rubric.",
-      "costLimitUsd": 2
+      "nextAction": "Use this rubric as the quality gate for future opportunity research.",
+      "costLimitUsd": 2,
+      "updatedAt": "2026-09-19T14:02:40.559Z",
+      "outputFile": "control/outputs/T-002-market-evidence-rubric.txt",
+      "managerDecision": "PASS",
+      "reviewFile": "control/outputs/T-002-manager-review.txt"
     },
     {
       "id": "T-003",
       "title": "Add Distribution Analysis stage",
       "department": "Distribution",
       "owner": "sales-agent",
-      "status": "inbox",
+      "status": "done",
       "experiment": "Core System",
       "successCondition": "Every validated opportunity includes how competitors acquire customers and where we can test distribution cheaply.",
-      "nextAction": "Define distribution research output.",
-      "costLimitUsd": 2
+      "nextAction": "Attach this Distribution Analysis stage to future validated opportunities.",
+      "costLimitUsd": 2,
+      "updatedAt": "2026-09-19T14:04:28.230Z",
+      "outputFile": "control/outputs/T-003-distribution-stage.txt",
+      "managerDecision": "PASS",
+      "reviewFile": "control/outputs/T-003-manager-review.txt"
     },
     {
       "id": "T-004",
       "title": "Create War Room experiment scorecard",
       "department": "Strategy",
       "owner": "war-room",
-      "status": "inbox",
+      "status": "done",
       "experiment": "Core System",
       "successCondition": "Experiments can be compared using spend, replies, conversations, pilots, revenue, and time.",
-      "nextAction": "Define scorecard fields and kill/continue/scale rules.",
-      "costLimitUsd": 1
+      "nextAction": "Use this scorecard to evaluate every active experiment before additional spend.",
+      "costLimitUsd": 1,
+      "updatedAt": "2026-09-19T14:10:07.757Z",
+      "outputFile": "control/outputs/T-004-war-room-scorecard.txt",
+      "managerDecision": "PASS",
+      "reviewFile": "control/outputs/T-004-manager-review.txt"
     }
   ]
 }
