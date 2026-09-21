@@ -1,0 +1,814 @@
+# Distribution Analysis Stage
+
+## Purpose
+
+Determine the cheapest, fastest, and most verifiable path to reach qualified buyers for an opportunity that has already passed **Market Evidence review**.
+
+This stage does **not** assume that a competitor’s presence proves customer acquisition. It separates:
+
+- **Verified channel evidence:** observable evidence that a competitor or comparable provider uses a channel and appears to generate buyer activity.
+- **Directional evidence:** suggestive but incomplete evidence.
+- **Hypothesis:** a plausible channel with no meaningful verification yet.
+
+The stage must prioritize real-world validation over desk research and must operate within the current approximate testing budget of **$200 total** unless a human approves additional spend.
+
+---
+
+# REQUIRED INPUTS
+
+Distribution Analysis may run only when the opportunity has a passed Market Evidence review.
+
+## 1. Opportunity definition
+
+Required:
+
+- Product or service description
+- Target customer segment
+- Buyer role and decision-maker
+- Core problem being solved
+- Primary use case
+- Geography or service area
+- Expected price or pricing range
+- Delivery constraints
+- Existing product assets
+- Current founder/operator availability
+
+## 2. Market Evidence review output
+
+Required:
+
+- Market Evidence status: `PASSED`
+- Evidence supporting demand
+- Customer pain points
+- Customer language and terminology
+- Known alternatives and competitors
+- Evidence of willingness to pay, if available
+- Unresolved assumptions
+
+No Distribution Analysis should begin if Market Evidence status is:
+
+- `FAILED`
+- `INCOMPLETE`
+- `UNVERIFIED`
+
+## 3. Distribution constraints
+
+Required:
+
+- Maximum available test budget
+- Maximum test duration
+- Geographic limitations
+- Regulatory or platform restrictions
+- Whether cold outreach is permitted
+- Whether the operator can conduct calls, demos, or fulfillment manually
+- Available domains, email accounts, social accounts, marketplace accounts, or community memberships
+
+Default budget assumption:
+
+```text
+Maximum unapproved distribution testing budget: $200 total
+```
+
+## 4. Competitor and comparable-provider list
+
+For each competitor or comparable provider:
+
+- Name
+- URL or profile
+- Product category
+- Target customer
+- Geography
+- Relevant channels to investigate
+- Date checked
+
+---
+
+# RESEARCH STEPS
+
+## Step 1: Define the initial distribution hypothesis
+
+Create a short hypothesis:
+
+> “The first qualified customers can likely be reached through [channel] because [evidence or reason], using [message/offer], within [timeframe].”
+
+Each proposed channel must be labeled:
+
+- `VERIFIED`
+- `DIRECTIONAL`
+- `HYPOTHESIS`
+- `UNKNOWN`
+
+Do not present assumptions as findings.
+
+---
+
+## Step 2: Research where competitors appear to acquire customers
+
+Investigate observable acquisition signals across the following channel categories.
+
+### A. Direct outreach
+
+Look for:
+
+- Public sales contact information
+- Sales representatives
+- Demo or consultation calls
+- Prospecting language
+- LinkedIn activity from sales or founder accounts
+- Public outbound case studies
+- Email capture and lead magnets
+- Follow-up or booking flows
+
+Evidence examples:
+
+- A competitor actively contacts prospects from identifiable sales accounts
+- A public “book a demo” process
+- Multiple buyer-facing sales representatives
+- A visible outbound campaign or prospecting post
+
+Not sufficient by itself:
+
+- A contact form
+- An email address
+- A generic “contact us” page
+
+These indicate lead capture, not necessarily customer acquisition.
+
+### B. Organic search
+
+Look for:
+
+- Ranking pages for buyer-intent terms
+- Consistent educational content
+- Comparison pages
+- Programmatic landing pages
+- Search traffic estimates from reputable tools
+- Backlinks or referring domains
+- Search-driven product reviews
+
+Record:
+
+- Search query
+- Ranking URL
+- Estimated traffic, if available
+- Commercial intent
+- Evidence date
+- Source reliability
+
+### C. Local and map-based channels
+
+Look for:
+
+- Google Business Profiles
+- Local directory listings
+- Reviews
+- Local landing pages
+- Community sponsorships
+- Chamber or trade association listings
+- Local service marketplaces
+- Evidence of geographic concentration
+
+Strong signals include:
+
+- Recent, repeated customer reviews
+- Active local profiles
+- Consistent review velocity
+- Calls, bookings, or quote requests visibly supported by the listing
+
+### D. Marketplaces and directories
+
+Investigate relevant:
+
+- Product marketplaces
+- Service marketplaces
+- App stores
+- B2B directories
+- Freelancer platforms
+- Vertical-specific directories
+- Request-for-proposal platforms
+
+Record:
+
+- Number of comparable providers
+- Review count and recency
+- Listing quality
+- Ranking or featured placement
+- Customer request volume, if visible
+- Fees and approval requirements
+
+### E. Existing communities
+
+Look for customer activity in:
+
+- Reddit
+- Facebook Groups
+- LinkedIn Groups
+- Slack communities
+- Discord communities
+- Industry forums
+- Professional associations
+- Local community groups
+- Events and meetups
+
+Verify:
+
+- Whether the target buyer is present
+- Whether the problem is discussed
+- Whether recommendations are allowed
+- Whether commercial posts are permitted
+- Whether competitors participate
+- Whether direct response is possible
+
+Do not treat community membership alone as evidence of acquisition.
+
+### F. Referrals and partnerships
+
+Look for:
+
+- Referral programs
+- Affiliate programs
+- Integration partners
+- Resellers
+- Consultants
+- Agencies
+- Professional associations
+- Channel partners
+- Public co-marketing activity
+
+Record evidence of:
+
+- Referral incentives
+- Partner pages
+- Co-branded content
+- Shared customer case studies
+- Repeat partner relationships
+
+### G. Paid acquisition
+
+Paid channels should be investigated but tested only after lower-cost options unless strong evidence justifies otherwise.
+
+Check for:
+
+- Search ads
+- Social ads
+- Sponsored listings
+- Retargeting
+- Sponsorships
+- Newsletter ads
+- Influencer placements
+
+Evidence sources may include:
+
+- Public ad libraries
+- Search-result observation
+- Sponsored content disclosures
+- Marketplace promotion labels
+- Competitor landing pages connected to ads
+
+A visible ad proves that an ad exists, not that it is profitable.
+
+---
+
+## Step 3: Score channel evidence
+
+Score every channel on a 0–3 scale.
+
+| Score | Meaning |
+|---|---|
+| 0 | No evidence found |
+| 1 | Plausible hypothesis only |
+| 2 | Observable activity or directional evidence |
+| 3 | Multiple independent, verifiable signals of buyer acquisition |
+
+A channel may be marked `VERIFIED` only when it has at least one strong direct signal or multiple independent signals.
+
+Examples of stronger evidence:
+
+- Competitor-specific landing page linked to a visible ad
+- High review velocity on a relevant marketplace
+- Repeated buyer requests in a community
+- Public case studies naming a channel
+- Multiple competitors consistently using the same channel
+- A live funnel that can be traced from source to booking, inquiry, or purchase
+
+---
+
+## Step 4: Identify the cheapest and fastest testable channel
+
+Rank channels using:
+
+```text
+Channel Priority =
+Evidence Strength
+× Buyer Access
+× Test Speed
+× Learning Value
+÷ Cost and Operational Friction
+```
+
+Use qualitative ratings where exact data is unavailable.
+
+Prefer, in order:
+
+1. Existing customer or professional referrals
+2. Direct outreach to a tightly defined buyer list
+3. Relevant existing communities
+4. Local listings and local outreach
+5. Marketplaces and directories
+6. Partnerships
+7. Organic content or SEO
+8. Paid acquisition
+
+This order may be overridden when a channel has unusually strong verified evidence and low test cost.
+
+The selected first channel must be:
+
+- Reachable without substantial spend
+- Capable of producing a response within 7–14 days
+- Narrow enough to measure
+- Compatible with the current offer
+- Legally and platform compliant
+- Able to produce a meaningful customer signal, not merely impressions
+
+---
+
+## Step 5: Design the first test
+
+The first test must be a **minimum viable distribution experiment**, not a broad launch.
+
+It must specify:
+
+- Target audience
+- Exact list or source of prospects
+- Channel
+- Number of attempts or placements
+- Offer
+- Message
+- Call to action
+- Follow-up sequence
+- Landing page or booking mechanism
+- Test duration
+- Cost ceiling
+- Success metric
+- Stop conditions
+
+### Default first test
+
+Unless stronger evidence supports another channel:
+
+> Conduct a manually researched, personalized outreach test to 25–50 tightly matched prospects or referral sources over 7–10 days.
+
+Suggested structure:
+
+- 25–50 qualified prospects
+- 1 personalized initial message
+- 1–2 follow-ups
+- One clear low-friction CTA
+- Manual tracking in a spreadsheet
+- No paid automation
+- No large content campaign
+- No paid ads
+
+Examples of CTAs:
+
+- “Would a 15-minute workflow review be useful?”
+- “Are you currently solving this problem another way?”
+- “Would you be open to testing a manual version with your team?”
+- “Can I send a two-minute example tailored to your situation?”
+
+The CTA should seek a meaningful next step, not vague awareness.
+
+---
+
+## Step 6: Define required assets and messages
+
+Minimum assets:
+
+- One-sentence positioning statement
+- Customer-specific pain statement
+- One clear offer
+- Short outreach message
+- Follow-up message
+- Proof or credibility element
+- Simple landing page, form, calendar, or reply-based workflow
+- Objection-handling notes
+- Tracking sheet
+
+### Required message structure
+
+1. Relevant observation about the recipient
+2. Specific problem or outcome
+3. Why the sender is contacting them
+4. Concrete offer
+5. Low-friction CTA
+6. Opt-out or respectful close where appropriate
+
+Do not use unsupported claims such as:
+
+- “Industry-leading”
+- “Guaranteed”
+- “Everyone needs this”
+- “Our competitors use this channel successfully”
+
+---
+
+## Step 7: Run the test and collect evidence
+
+Track each attempt individually:
+
+- Prospect/source
+- Qualification status
+- Date contacted
+- Message version
+- Channel
+- Delivered or visible
+- Opened, if available
+- Replied
+- Positive reply
+- Qualified conversation
+- Meeting booked
+- Proposal or trial
+- Payment or deposit
+- Objection
+- Follow-up date
+- Final outcome
+
+Evidence must include raw artifacts where possible:
+
+- Screenshots
+- URLs
+- Ad-library records
+- Community posts
+- Search-result captures
+- Marketplace listings
+- Outreach log
+- Replies
+- Meeting notes
+- Payment records
+- Referral introductions
+
+---
+
+# OUTPUT SCHEMA
+
+The Distribution Analysis output should use the following structure.
+
+```yaml
+distribution_analysis:
+  opportunity_id:
+  status:
+    market_evidence_gate: PASSED
+    distribution_status: COMPLETE | INCOMPLETE | BLOCKED
+
+  objective:
+  target_buyer:
+  geography:
+  available_budget:
+  available_time:
+
+  competitor_channel_findings:
+    - competitor:
+      channel:
+      evidence_type: VERIFIED | DIRECTIONAL | HYPOTHESIS | UNKNOWN
+      evidence:
+      source_urls:
+      date_checked:
+      confidence: LOW | MEDIUM | HIGH
+      interpretation:
+      limitations:
+
+  channel_matrix:
+    - channel:
+      category:
+      buyer_access: LOW | MEDIUM | HIGH
+      evidence_strength: 0-3
+      expected_speed: SLOW | MEDIUM | FAST
+      expected_cost: LOW | MEDIUM | HIGH
+      operational_friction: LOW | MEDIUM | HIGH
+      policy_or_compliance_risk:
+      testability:
+      recommendation: TEST_NOW | TEST_LATER | DO_NOT_TEST
+      rationale:
+
+  selected_first_channel:
+  selection_reason:
+  distribution_hypothesis:
+
+  first_test:
+    objective:
+    audience_definition:
+    sample_size:
+    source_of_prospects:
+    message_version:
+    offer:
+    call_to_action:
+    follow_up_plan:
+    assets_required:
+    start_date:
+    end_date:
+    maximum_spend:
+    owner:
+
+  measurement_plan:
+    primary_metric:
+    secondary_metrics:
+    denominator_definition:
+    tracking_method:
+    minimum_data_threshold:
+
+  test_result:
+    prospects_or_exposures:
+    delivered_or_reached:
+    responses:
+    positive_responses:
+    qualified_conversations:
+    meetings:
+    trials_or_proposals:
+    payments:
+    spend:
+    time_spent:
+    objections:
+    evidence_links:
+
+  decision:
+    status: KILL | CONTINUE | SCALE | NEEDS_MORE_DATA
+    rationale:
+    next_action:
+    next_budget:
+    new_hypotheses:
+```
+
+---
+
+# TEST RULES
+
+## 1. Budget rules
+
+Default total unapproved budget:
+
+```text
+$200 maximum
+```
+
+Recommended allocation:
+
+| Use | Maximum |
+|---|---:|
+| Domain, email, or basic landing-page needs | $50 |
+| Marketplace or directory fees | $50 |
+| Local or community test costs | $25 |
+| Small experiment, sample, or fulfillment cost | $50 |
+| Contingency | $25 |
+
+Do not spend the full $200 automatically. The budget is a ceiling, not a target.
+
+Default first-test spend:
+
+```text
+$0–$50
+```
+
+Paid ads should not be used in the first test unless:
+
+- The channel is strongly verified
+- The offer and landing page are already clear
+- A qualified audience can be narrowly targeted
+- The test has a strict spend cap
+- Human approval is obtained where required
+
+## 2. One-variable rule
+
+The first test should change only one major variable:
+
+- Channel
+- Audience
+- Message
+- Offer
+- CTA
+
+Do not simultaneously change all five. If the test fails, the system must be able to identify what was learned.
+
+## 3. Minimum sample rules
+
+Use minimum sample sizes appropriate to the channel:
+
+- Direct outreach: 25–50 qualified contacts
+- Community post: 1–3 relevant communities, subject to rules
+- Referral test: 5–10 credible referral sources
+- Marketplace listing: one optimized listing for at least 7–14 days
+- Local test: 10–25 qualified local businesses or households, as appropriate
+- Paid test: only with a predefined impression, click, or lead threshold
+
+A small sample may generate a useful qualitative signal but cannot justify scaling by itself.
+
+## 4. No vanity-metric rule
+
+The primary metric must represent buyer intent.
+
+Prefer:
+
+- Qualified positive reply rate
+- Qualified conversations
+- Meetings held
+- Trials started
+- Deposits
+- Paid conversions
+- Referral introductions
+
+Do not use impressions, likes, followers, or traffic as the primary success metric unless they directly lead to a validated action.
+
+## 5. Evidence integrity rules
+
+Every claim must be labeled:
+
+- `Observed`
+- `Reported by source`
+- `Inferred`
+- `Hypothesis`
+
+The system must not:
+
+- Invent competitor channels
+- Infer profitability from visibility
+- Treat a social account as an acquisition channel without buyer-response evidence
+- Treat a high ranking as proof of conversions
+- Treat a competitor’s paid ad as proof of positive ROI
+- Use unverifiable traffic or revenue estimates as facts
+
+## 6. Stop-loss rule
+
+Stop a test immediately if:
+
+- It violates platform or legal rules
+- The audience is clearly unqualified
+- The offer creates misleading expectations
+- Spend reaches the test cap without sufficient learning
+- Negative feedback indicates a positioning or trust problem
+- Manual fulfillment cannot support resulting demand
+
+---
+
+# KILL / CONTINUE / SCALE RULES
+
+Thresholds should be adjusted for price, sales cycle, and channel, but the following defaults apply.
+
+## KILL
+
+Kill the channel or current test version when any of the following is true:
+
+- 25–50 qualified outreach attempts produce **zero relevant replies**
+- The channel produces no qualified conversation after the minimum sample
+- The audience repeatedly indicates the problem is not a priority
+- The cost per qualified conversation is clearly uneconomic relative to expected customer value
+- The channel requires substantial spend before producing a measurable signal
+- The message receives attention but no buyer-intent action after one reasonable revision
+- The channel cannot be measured reliably
+
+Killing a test does not necessarily kill the opportunity. Record the reason and preserve any useful objections or language.
+
+## CONTINUE
+
+Continue with a revised test when:
+
+- At least one qualified buyer expresses meaningful interest
+- There are repeated relevant replies but insufficient volume
+- The offer is understood but the CTA or timing is weak
+- Buyers identify a different urgent use case
+- The test produces strong qualitative evidence but too few observations
+- There are qualified conversations but no close due to a solvable trust, pricing, or fulfillment issue
+
+A continuation test may change one of:
+
+- Message
+- CTA
+- Segment
+- Offer
+- Follow-up timing
+- Proof asset
+
+Recommended continuation budget:
+
+```text
+Additional $25–$75, remaining within the $200 limit unless approved.
+```
+
+## SCALE
+
+Scale only when the test produces both quantitative and qualitative evidence.
+
+Minimum default scale evidence for direct outreach:
+
+- At least 50 qualified contacts, or equivalent buyer exposure
+- At least 3 qualified conversations
+- At least 2 serious next steps, such as trial, proposal, or demo
+- At least 1 payment, deposit, signed commitment, or repeated strong buying signal
+- A documented reason buyers responded
+- A repeatable message and audience definition
+- Fulfillment capacity confirmed
+- Acquisition cost estimate within acceptable economics
+
+For lower-volume or high-ticket offers, substitute equivalent evidence such as:
+
+- Multiple independent buyer commitments
+- Signed pilots
+- Paid discovery
+- Purchase orders
+- Strong referral commitments
+
+Scaling means increasing controlled volume, not immediately launching broad paid acquisition.
+
+Initial scaling actions should be:
+
+1. Repeat the winning message with a larger but similar audience.
+2. Add one adjacent segment.
+3. Improve tracking and follow-up.
+4. Document the sales process.
+5. Test a second low-cost channel.
+6. Seek human approval before material spend increases.
+
+---
+
+# HUMAN APPROVAL GATES
+
+## Gate 1: Before paid acquisition
+
+Human approval is required before:
+
+- Any paid advertising campaign
+- Sponsorship purchases
+- Influencer payments
+- Paid lead lists
+- Automated outreach tools with recurring fees
+- Spend above $50 on a single channel
+
+Required approval packet:
+
+- Channel evidence
+- Test objective
+- Audience definition
+- Creative or message
+- Landing page
+- Budget cap
+- Primary metric
+- Kill threshold
+- Expected learning
+
+## Gate 2: Before exceeding $200 total
+
+No additional distribution spend may be committed once cumulative spend reaches $200 without explicit human approval.
+
+Approval must include:
+
+- Total spend to date
+- Results by channel
+- Qualified buyer evidence
+- Cost per qualified action
+- Remaining uncertainty
+- Proposed next test
+- Why additional spend is justified
+
+## Gate 3: Before scaling volume
+
+Human approval is required before:
+
+- Sending more than 100 outbound messages in a test cycle
+- Hiring sales or marketing support
+- Purchasing substantial software
+- Expanding to multiple paid channels
+- Increasing spend by more than 2×
+- Entering a new geography
+- Making public claims based on early results
+
+## Gate 4: Before operational commitments
+
+Approval is required before:
+
+- Long-term contracts
+- Annual software subscriptions
+- Marketplace packages
+- Inventory or production commitments
+- Paid partnerships
+- Agency retainers
+- Commitments that cannot be recovered if the channel fails
+
+## Gate 5: Before declaring distribution validated
+
+Distribution may be marked `VALIDATED` only when:
+
+- The acquisition channel is documented
+- The target audience is specific
+- The message and offer are repeatable
+- Buyer-intent metrics have been recorded
+- At least one meaningful commercial outcome exists
+- Evidence is stored and auditable
+- Costs and operational requirements are understood
+- A human approves the transition from testing to scaling
+
+The stage should end with one of four statuses:
+
+```text
+KILL
+CONTINUE
+SCALE
+BLOCKED — HUMAN APPROVAL REQUIRED
+```
