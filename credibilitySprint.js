@@ -38,23 +38,28 @@ async function ask(instructions, input) {
 async function reviewPackage(pkg) {
   return ask(
     `
-You are a strict credibility reviewer for a small B2B service.
+You are a strict launch-readiness reviewer for a small B2B HVAC workflow service.
 
 First line must be exactly PASS or REJECT.
 
 PASS only if the package:
 - looks credible enough for a cold prospect to investigate,
 - does not invent proof,
-- does not overbuild,
-- clearly explains the service,
-- includes a concrete pilot structure,
-- includes honest contact/identity guidance,
+- clearly explains the service and operating workflow,
+- includes a concrete paid pilot with price, duration, scope, and limits,
+- includes real identity/contact details,
+- includes a practical booking method,
+- includes a basic data-handling procedure,
+- includes basic pilot commercial terms as a draft requiring human approval before use,
+- includes an internal test plan using fictional data,
 - reduces sketch-factor,
-- uses simple professional language,
-- can be implemented quickly and cheaply.
+- can be implemented quickly and cheaply,
+- avoids fake claims and overbuilding.
+
+Do NOT reject merely because the business is early-stage if the package is honest about that.
 
 After the first line:
-1. list the 3 biggest credibility risks,
+1. list the 3 biggest remaining risks,
 2. list exact fixes,
 3. state whether the package is ready to implement.
 `,
@@ -68,84 +73,63 @@ async function runCredibilitySprint() {
 
   updateTask(id, {
     status: "working",
-    nextAction: "Manager is delegating brand, website, sender-identity, pilot-offer, and QA work."
+    nextAction: "Manager is delegating brand, website, pilot, operations, data-handling, sender identity, and QA."
   });
 
   const context = `
 ComfortRelay is a Columbus-area HVAC lead-routing and follow-up service.
-Current promise: keep urgent requests visible, routine inquiries organized, and follow-up clear without adding busywork.
-Current validation status: real cold outreach is already running.
-The immediate problem: cold emails from an unknown Gmail address can look sketchy without a credible web/brand footprint.
 
-Known facts:
-- Do not claim customers, proven savings, testimonials, measured performance improvements, or traction we do not have.
-- We are seeking early Columbus-area HVAC pilot customers.
-- Current intended paid pilot price: $199 for 30 days, no long-term contract, with hands-on setup and adjustments during the pilot.
-- The prospect should receive a clear description of what is actually delivered.
-- Any workflow example must be explicitly labeled SAMPLE / FICTIONAL DATA.
-- Contact details must be real and implementable, not placeholders left unexplained.
+REAL IDENTITY / CONTACT FACTS:
+- Operator first name: Brandon
+- Brand: ComfortRelay
+- Current contact email: comfortrelayohio@gmail.com
+- Current booking method for early pilots: prospect replies by email and Brandon coordinates the walkthrough manually.
+- Do not invent a phone number, domain, office address, team size, customer count, testimonials, measured savings, or existing integrations beyond the actual workflow.
 
-Constraints:
+CURRENT WORKFLOW FACTS:
+- Outreach pipeline is tracked in Google Sheets.
+- Gmail is used for outreach and replies.
+- Make workflows handle scheduled follow-ups and reply monitoring.
+- Telegram is used for internal reply alerts.
+- Human review remains in the loop for consequential customer communication.
+- The current system is an early-stage managed service / pilot workflow, not mature SaaS.
+
+PILOT DEFAULT:
+- $199
+- 30 days
+- no long-term contract
+- hands-on setup and adjustments during the pilot
+- exact scope and commercial terms must be stated clearly
+- anything presented as a commercial/legal term must be labeled DRAFT FOR HUMAN APPROVAL before use
+
+DATA-HANDLING PRINCIPLE:
+- Collect only information needed to route and follow up on inquiries.
+- Access should be limited to the agreed workflow.
+- Do not claim a retention/deletion practice is already operational unless the package labels it as a launch procedure to implement before the first customer.
+- Avoid handling payment card data, medical data, government IDs, or other unnecessary sensitive data.
+
+GOAL:
+Create the minimum credible launch package needed to make a cold HVAC prospect feel comfortable investigating ComfortRelay and considering a paid pilot.
+
+CONSTRAINTS:
 - Do not overbuild.
-- Keep the launch package minimal.
-- Keep the tone simple, confident, local, professional, and human.
-- The purpose is to increase trust enough to earn replies, demos, and paid pilots.
+- Be honest about the early stage.
+- Keep tone simple, confident, local, professional, and human.
 - Avoid generic AI-agency language.
+- Use fictional/sample data only when clearly labeled.
 `;
 
   const brand = await ask(
     `
 You are the Brand Strategist.
-Create ONE practical visual direction for ComfortRelay, not three.
+Create ONE minimal visual direction for ComfortRelay.
 
 Return only:
-1. Brand positioning in one sentence.
-2. One logo direction detailed enough for an image-generation model or designer.
-3. Simple color/typography direction using free/system-safe options.
+1. Positioning sentence.
+2. One logo direction.
+3. Free/system-safe color and typography direction.
 4. Honest trust signals available now.
 5. Trust signals we must NOT fake.
-Keep it minimal enough to implement immediately.
-`,
-    context
-  );
-
-  const website = await ask(
-    `
-You are the Website Copy Builder.
-Draft concise copy for ONE simple one-page ComfortRelay website.
-
-Required sections:
-- Hero
-- What the service does
-- Simple 3-step workflow
-- Clearly labeled SAMPLE WORKFLOW using fictional HVAC lead data
-- 30-day $199 Founding Pilot: exact deliverables, duration, what happens during setup, and no long-term contract
-- Honest early-stage statement that we are looking for a small number of Columbus-area HVAC companies to test the workflow
-- FAQ
-- Contact/CTA
-
-Do not claim proven results, existing customers, savings, or integrations that are not verified.
-Do not imply measured operational improvements.
-Make it readable in under 2 minutes.
-`,
-    context + "\n\nBrand direction:\n" + brand
-  );
-
-  const identity = await ask(
-    `
-You are the Sales Identity Specialist.
-Create the minimum credible outbound identity for ComfortRelay.
-
-Return only:
-1. Recommended sender display name.
-2. Recommended sender email strategy, explicitly noting whether the current Gmail is acceptable temporarily and what domain-based address should replace it later.
-3. Recommended signature with real-person framing but no fake title inflation.
-4. Recommended footer.
-5. ONE improved first-touch email.
-6. ONE follow-up email.
-7. One sentence explaining what would make the message look suspicious and how this package reduces that risk.
-
-Do not invent a fake team, fake office, fake customer count, fake phone number, fake domain, or fake testimonials.
 `,
     context
   );
@@ -153,22 +137,165 @@ Do not invent a fake team, fake office, fake customer count, fake phone number, 
   const pilot = await ask(
     `
 You are the Offer Builder.
-Define one concrete ComfortRelay founding pilot.
+Define the exact 30-day $199 ComfortRelay founding pilot.
 
-Return only:
-- Price
-- Duration
-- Exact deliverables
-- What the customer has to provide
-- What setup involves
-- What the customer will see/receive
-- What is manual vs automated during the pilot
-- What is explicitly NOT promised
-- The single CTA used after interest
+Return:
+- buyer
+- price
+- duration
+- exact deliverables
+- what setup requires from the customer
+- what ComfortRelay configures
+- what remains manual
+- what is automated
+- what the customer receives/sees
+- response/escalation expectations
+- boundaries / what is NOT promised
+- cancellation / end-of-pilot handling
+- single CTA after interest
 
-Keep it implementable with the current workflow and honest about the early stage.
+Keep it realistic with the current Gmail + Google Sheets + Make + Telegram workflow.
+Do not claim 24/7 human monitoring unless it actually exists.
 `,
     context
+  );
+
+  const operations = await ask(
+    `
+You are the Operations Designer.
+Create a concrete operating SOP for the founding pilot.
+
+Include:
+1. Intake sources we can support initially.
+2. How a new inquiry enters the workflow.
+3. How urgent vs routine requests are identified.
+4. What automation does.
+5. What Brandon manually reviews.
+6. Expected review cadence.
+7. Escalation method for urgent items.
+8. What happens if routing or forwarding fails.
+9. What gets logged.
+10. End-of-day / follow-up process.
+11. What is explicitly out of scope.
+
+Do not invent capabilities that are not available through Gmail, Google Sheets, Make, and Telegram.
+`,
+    context + "\n\nPILOT:\n" + pilot
+  );
+
+  const dataPolicy = await ask(
+    `
+You are the Data Handling Designer.
+Write a minimal pre-launch data procedure for ComfortRelay's founding pilot.
+
+It must clearly distinguish CURRENT TOOLS from PROCEDURES TO IMPLEMENT BEFORE FIRST CUSTOMER.
+
+Include:
+- data categories allowed
+- prohibited/unnecessary sensitive data
+- where data may be stored in the current stack
+- who may access it
+- minimum-access principle
+- how access is granted/revoked
+- how corrections/exports/deletion requests are handled
+- retention/deletion procedure at pilot end
+- incident/escalation procedure
+- what must be disclosed to a customer
+
+Do not make legal-compliance guarantees.
+Keep it practical enough to implement manually.
+`,
+    context
+  );
+
+  const terms = await ask(
+    `
+You are the Commercial Terms Drafter.
+Draft a SIMPLE founding-pilot terms sheet labeled:
+"DRAFT — HUMAN APPROVAL REQUIRED BEFORE CUSTOMER USE"
+
+Include:
+- service
+- $199 price
+- 30-day term
+- payment timing
+- scope
+- customer responsibilities
+- no guaranteed lead volume/revenue/savings
+- confidentiality
+- basic data handling reference
+- termination/cancellation
+- what happens to unused time
+- limitation-of-liability placeholder language that explicitly says it should be reviewed by a qualified advisor before customer use
+
+Keep it short. Do not pretend this is legal advice or a final contract.
+`,
+    context + "\n\nPILOT:\n" + pilot
+  );
+
+  const identity = await ask(
+    `
+You are the Sales Identity Specialist.
+
+Use the real identity facts:
+- Brandon
+- ComfortRelay
+- comfortrelayohio@gmail.com
+- booking by replying to the email for now
+
+Return only:
+1. sender display name
+2. signature
+3. footer
+4. one first-touch email
+5. one follow-up email
+6. one interested-reply message that moves toward the $199 pilot
+7. how to transition later to a domain-based email without pretending we already have one
+
+No fake titles, phone numbers, addresses, domains, staff, or testimonials.
+`,
+    context + "\n\nPILOT:\n" + pilot
+  );
+
+  const website = await ask(
+    `
+You are the Website Copy Builder.
+Draft concise copy for ONE one-page ComfortRelay website.
+
+Required:
+- Hero
+- What ComfortRelay does
+- 3-step workflow based on the actual operating SOP
+- clearly labeled SAMPLE WORKFLOW using fictional HVAC inquiry data
+- 30-day $199 Founding Pilot with exact deliverables
+- honest early-stage statement that ComfortRelay is seeking a small number of Columbus-area HVAC pilot customers
+- FAQ covering setup, urgent vs routine handling, data, cancellation, and what happens if the workflow fails
+- Contact/CTA using comfortrelayohio@gmail.com and "reply/request a walkthrough"
+
+Do not claim existing customers, proven savings, guaranteed results, or capabilities outside the current stack.
+`,
+    context + "\n\nBRAND:\n" + brand + "\n\nPILOT:\n" + pilot + "\n\nOPERATIONS:\n" + operations + "\n\nDATA:\n" + dataPolicy
+  );
+
+  const internalTest = await ask(
+    `
+You are the QA/Test Designer.
+Create a pre-customer internal test using FICTIONAL HVAC data.
+
+Include:
+- normal inquiry
+- urgent no-heat/no-cool inquiry
+- malformed/missing-field inquiry
+- duplicate inquiry
+- failed forwarding/notification simulation
+- expected Google Sheet state
+- expected Gmail action
+- expected Telegram alert
+- pass/fail criteria
+
+The test must be runnable without contacting a real prospect.
+`,
+    context + "\n\nOPERATIONS:\n" + operations
   );
 
   let finalPackage = `
@@ -180,64 +307,66 @@ ${brand}
 
 ${website}
 
-=== PILOT OFFER ===
+=== FOUNDING PILOT ===
 
 ${pilot}
+
+=== OPERATING SOP ===
+
+${operations}
+
+=== DATA HANDLING PROCEDURE ===
+
+${dataPolicy}
+
+=== DRAFT COMMERCIAL TERMS ===
+
+${terms}
 
 === EMAIL IDENTITY + OUTREACH ===
 
 ${identity}
+
+=== INTERNAL QA TEST ===
+
+${internalTest}
 `;
 
   const firstReview = await reviewPackage(finalPackage);
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "T-005-credibility-review-round1.txt"),
-    firstReview
-  );
+  fs.writeFileSync(path.join(OUTPUT_DIR, "T-005-credibility-review-round1.txt"), firstReview);
 
   let finalReview = firstReview;
 
   if (!firstReview.trim().toUpperCase().startsWith("PASS")) {
-    const revised = await ask(
+    finalPackage = await ask(
       `
 You are the Revision Manager.
+Revise the complete package ONCE using every specific reviewer fix.
 
-You are given a draft launch package and a strict reviewer rejection.
-Revise the package ONCE using every concrete reviewer fix.
-
-Hard requirements:
-- Reduce it to one logo direction, one one-page website, one concrete pilot, one outreach email, and one follow-up.
-- Include honest real-world identity/contact guidance.
-- State the pilot price, duration, deliverables, and what the prospect actually receives.
-- Use an honest early-stage pilot statement instead of implying existing success.
-- Include a sample workflow clearly labeled as fictional/sample data.
-- Do not imply measured performance improvements.
-- Do not invent proof, customers, savings, testimonials, staff, addresses, phone numbers, domains, or integrations.
-- Output the complete revised implementation-ready package, not commentary about it.
+Rules:
+- Preserve the real identity/contact facts.
+- Do not invent proof, customers, domains, phone numbers, addresses, testimonials, or performance results.
+- Keep commercial terms labeled draft/human-approval-required.
+- Keep data procedures operationally realistic.
+- Keep the package minimal enough for an early-stage business.
+- Output the COMPLETE revised package only.
 `,
-      "DRAFT PACKAGE:\n" + finalPackage + "\n\nREVIEWER REJECTION:\n" + firstReview
+      "PACKAGE:\n" + finalPackage + "\n\nREVIEW:\n" + firstReview
     );
 
-    finalPackage = revised;
     finalReview = await reviewPackage(finalPackage);
   }
 
   const passed = finalReview.trim().toUpperCase().startsWith("PASS");
 
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "T-005-comfortrelay-credibility-package.txt"),
-    finalPackage
-  );
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, "T-005-credibility-review.txt"),
-    finalReview
-  );
+  fs.writeFileSync(path.join(OUTPUT_DIR, "T-005-comfortrelay-credibility-package.txt"), finalPackage);
+  fs.writeFileSync(path.join(OUTPUT_DIR, "T-005-credibility-review.txt"), finalReview);
 
   updateTask(id, {
     status: passed ? "done" : "review",
     nextAction: passed
-      ? "Implement the reviewer-approved one-page site, logo direction, pilot offer, and sender identity."
-      : "Human review required: the automatic revision still did not pass.",
+      ? "Implement the approved website/logo/email identity and run the fictional-data QA checklist before the first pilot."
+      : "Human review required: remaining blockers are listed in the final review.",
     managerDecision: passed ? "PASS" : "REJECT",
     outputFile: "control/outputs/T-005-comfortrelay-credibility-package.txt",
     reviewFile: "control/outputs/T-005-credibility-review.txt"
@@ -246,7 +375,6 @@ Hard requirements:
   console.log("\n=== T-005 " + (passed ? "DONE" : "NEEDS HUMAN REVISION") + " ===\n");
   console.log("Package: control/outputs/T-005-comfortrelay-credibility-package.txt");
   console.log("Final review: control/outputs/T-005-credibility-review.txt");
-  console.log("Round 1 review: control/outputs/T-005-credibility-review-round1.txt");
 }
 
 runCredibilitySprint().catch((err) => {
