@@ -1,0 +1,625 @@
+# Market Evidence Rubric v1.0
+
+## 0. Decision standard
+
+An opportunity passes only when:
+
+1. Every mandatory gate passes.
+2. No disqualifier applies.
+3. The opportunity scores at least **70/100**.
+4. It scores at least the minimum required points in every critical category.
+5. Evidence is recent, attributable, and independently verifiable.
+
+Exciting descriptions, large market-size estimates, trend articles, search volume, social engagement, or founder intuition are not sufficient evidence by themselves.
+
+---
+
+# 1. Evidence standards
+
+## 1.1 Evidence quality tiers
+
+| Tier | Evidence | Reliability |
+|---|---|---:|
+| A | Actual purchase, paid invoice, active customer case, public pricing with identifiable buyer, transaction marketplace data, or direct buyer commitment | Strong |
+| B | Competitor with active customers, recurring reviews mentioning the problem, job postings, procurement requests, buyer interviews with specific current spending | Moderate |
+| C | Search volume, social comments, waitlists, likes, trend reports, surveys asking hypothetical questions | Weak |
+| D | Founder opinion, generic TAM claims, unsupported forecasts, “people would pay,” or AI-generated market claims | Unacceptable |
+
+At least one **Tier A** demand or pricing signal is required to pass.
+
+## 1.2 Evidence requirements
+
+Every evidence item must include:
+
+- Source URL or file reference.
+- Date collected.
+- Date of the underlying activity, if available.
+- What specifically it proves.
+- Whether it is first-party, third-party, or self-reported.
+- Any relevant limitations.
+- Researcher confidence: high, medium, or low.
+
+Evidence older than **24 months** should not be used as primary evidence unless the market is demonstrably stable.
+
+## 1.3 Independence rule
+
+Repeated claims from the same company, affiliate network, or copied article count as **one evidence source**, not multiple sources.
+
+---
+
+# 2. Mandatory PASS/REJECT gates
+
+All gates below must pass.
+
+## Gate 1: Specific paying customer
+
+**Pass if:**
+
+- The buyer is a specific identifiable segment, not “everyone” or “businesses.”
+- The buyer has a defined recurring or urgent job.
+- The buyer can be reached through at least one observable channel.
+- At least **3 independent examples** show that this customer type currently pays for a related solution.
+
+**Reject if:**
+
+- The proposed customer is undefined.
+- The problem is described only as a general inconvenience.
+- Evidence consists only of hypothetical survey responses or trend commentary.
+
+---
+
+## Gate 2: Proven demand
+
+Pass if one of the following is documented:
+
+### Strong path
+
+- At least **3 paying competitors or substitutes** with evidence of active customers; or
+- At least **10 recent buyer transactions** for comparable products or services; or
+- At least **3 direct buyer commitments**, deposits, purchase orders, or signed pilots.
+
+### Acceptable early-stage path
+
+- At least **2 paying competitors or substitutes**, plus:
+  - **10 buyer interviews or conversations**, and
+  - At least **3 buyers** reporting that they currently spend money, staff time, or external fees on the problem.
+
+The evidence must show current behavior, not merely interest.
+
+**Reject if:**
+
+- No one can be shown to pay for the problem or a close substitute.
+- Demand depends primarily on a predicted future trend.
+- The only signal is views, likes, search interest, newsletter subscriptions, or free usage.
+
+---
+
+## Gate 3: Buyer willingness to pay
+
+Pass if at least one of the following exists:
+
+- Publicly observable comparable pricing from **3 or more providers**.
+- At least **3 buyers** disclose current spend for the same or closely related outcome.
+- At least **3 qualified buyers** agree to a paid pilot, deposit, purchase order, or specific next step at a stated price.
+- A transaction marketplace shows at least **10 completed purchases** at a comparable price range.
+
+A buyer saying “I would consider it” does not qualify.
+
+The proposed initial price must be supported by at least one comparable transaction or explicit buyer commitment.
+
+**Reject if:**
+
+- Pricing is based only on cost-plus markup, competitor aspiration, or TAM math.
+- Buyers require extensive education before understanding the value.
+- The buyer is not the economic decision-maker and no purchasing path is identified.
+
+---
+
+## Gate 4: Economically viable unit
+
+The opportunity must have a plausible initial unit model.
+
+Pass if, using conservative assumptions:
+
+- Gross margin is projected at **50% or higher** after direct fulfillment costs; and
+- Customer acquisition cost can plausibly be recovered within **6 months** or **3 purchases**; and
+- The first customer can be served without requiring a large fixed investment; and
+- The proposed price is at least **3 times variable delivery cost**, including contractor, API, software, payment, and support costs.
+
+For service businesses, founder labor must be included at a realistic hourly rate.
+
+If exact costs are unknown, the Researcher must use a sensitivity range and pass only if the base case and downside case remain viable.
+
+**Reject if:**
+
+- The model requires scale before becoming economically viable.
+- Fulfillment cost is unknown or likely to exceed the selling price.
+- The opportunity depends on unpaid labor or permanently subsidized acquisition.
+
+---
+
+## Gate 5: Fulfillment feasibility
+
+Pass if:
+
+- A minimum viable deliverable can be produced within **14 calendar days**.
+- The first version can be delivered with existing tools, contractors, or manual processes.
+- AI or automation can reduce delivery time, labor, or error rate by at least **30%**, or materially increase output per operator.
+- Human review can be added for consequential outputs.
+- Required data, integrations, permissions, and inputs are available.
+
+**Reject if:**
+
+- The service requires unproven technical research before the first sale.
+- The value depends on fully autonomous AI accuracy where errors create material harm.
+- Required data is inaccessible, illegal to obtain, or dependent on unreliable third-party access.
+- Every customer requires a substantially different custom build.
+
+---
+
+## Gate 6: Observable distribution
+
+Pass if at least one acquisition channel meets all three conditions:
+
+1. The channel is observable: specific communities, directories, search terms, marketplaces, outbound lists, partners, events, or platforms can be named.
+2. The target customer is reachable through that channel.
+3. A test can be run for **14 days or less** with a budget of **$500 or less**, excluding founder labor.
+
+The Researcher must specify:
+
+- Channel.
+- Customer list or audience source.
+- Message or offer.
+- Expected number of contacts or impressions.
+- Success metric.
+- Test cost.
+- Follow-up process.
+
+**Reject if:**
+
+- Distribution depends on “going viral,” broad brand awareness, or an unnamed audience.
+- Customer acquisition requires a large advertising budget before learning is possible.
+- The only stated strategy is “SEO,” “social media,” or “partnerships” without a concrete test.
+
+---
+
+## Gate 7: Legal, ethical, and IP safety
+
+Pass if:
+
+- The business does not copy protected branding, artwork, code, content, or proprietary data.
+- Data collection and processing have a lawful basis.
+- Claims can be substantiated.
+- Required licenses, insurance, certifications, and professional oversight are identified.
+- No material regulatory barrier prevents a small validation test.
+
+**Reject if:**
+
+- The model depends on impersonation, counterfeit goods, scraping restricted data, copyright infringement, or trademark confusion.
+- The product requires regulated advice or decisions without qualified oversight.
+- The opportunity relies on market manipulation, insider information, or speculative trading.
+- The business cannot legally deliver the promised outcome in the target market.
+
+---
+
+## Gate 8: Fast validation path
+
+Pass if a paid or behavior-based test can be launched within **14 days**.
+
+The test must seek one of:
+
+- Payment.
+- Deposit.
+- Signed pilot.
+- Purchase order.
+- Scheduled qualified sales call with a documented budget and buying timeline.
+- Completed customer workflow using the proposed offer.
+
+A landing-page email signup alone does not qualify as validation.
+
+**Reject if:**
+
+- Validation requires months of product development.
+- The buyer’s purchase cycle is unknown and likely longer than six months.
+- No measurable test can distinguish demand from curiosity.
+
+---
+
+# 3. Required evidence by category
+
+## 3.1 Demand evidence
+
+The Researcher must provide:
+
+- At least **3 comparable paid solutions** or **10 comparable transactions**.
+- Customer segment and use case for each.
+- Price or transaction value where available.
+- Evidence that the problem is current.
+- Evidence of frequency, urgency, or financial consequence.
+- At least one substitute customers use today, including “do nothing” if relevant.
+
+Preferred evidence:
+
+- Active paid listings.
+- Current vendor pricing pages.
+- Reviews dated within the last 24 months.
+- Procurement postings.
+- Job postings showing repeated internal labor for the task.
+- Buyer interviews describing current spending and dissatisfaction.
+
+Insufficient evidence:
+
+- “The market is growing.”
+- “People complain online.”
+- “There are millions of potential customers.”
+- High search volume without purchase evidence.
+- Free tools with no evidence of conversion or commercial demand.
+
+---
+
+## 3.2 Pricing and willingness-to-pay evidence
+
+The Researcher must provide:
+
+- A proposed initial price.
+- A price range supported by at least **3 comparable paid offers**.
+- Expected purchase frequency.
+- Buyer or budget owner.
+- Reason the proposed offer can command that price.
+- Any setup, support, fulfillment, or refund costs.
+
+Preferred evidence:
+
+- Recent customer invoices.
+- Public checkout pages.
+- Marketplace completed-sale data.
+- Paid pilot commitments.
+- Buyer statements with current spend and budget authority.
+
+Required pricing test:
+
+- Present a specific offer and price to at least **10 qualified prospects**, or
+- Obtain at least **3 paid commitments or deposits**.
+
+---
+
+## 3.3 Fulfillment evidence
+
+The Researcher must provide:
+
+- Step-by-step delivery workflow.
+- Required inputs.
+- Tools, APIs, contractors, and human review points.
+- Estimated labor time per customer.
+- Direct cost per customer.
+- Expected quality standard.
+- Failure and escalation process.
+- Data security and retention requirements.
+- What AI or automation performs and what remains human-controlled.
+
+The workflow must be tested on at least **one representative sample** before final approval where technically possible.
+
+---
+
+## 3.4 Distribution evidence
+
+The Researcher must provide:
+
+- One primary channel and one backup channel.
+- Evidence that target buyers are active in each channel.
+- A reachable list, audience, marketplace, keyword set, or partner type.
+- Outreach or acquisition script.
+- Test budget and duration.
+- Target metrics.
+
+Minimum initial test metrics should include:
+
+- Number of targeted contacts or impressions.
+- Response rate.
+- Qualified conversation rate.
+- Offer acceptance rate.
+- Paid conversion rate.
+- Cost per qualified lead.
+- Cost per customer, if available.
+
+A channel is not validated by reach alone. It must produce qualified buyer behavior.
+
+---
+
+# 4. Disqualifiers
+
+Reject immediately if any of the following applies:
+
+1. No identifiable buyer or economic decision-maker.
+2. No evidence of current payment for the problem or a close substitute.
+3. Reliance on speculative trading, gambling, arbitrage, or beating professional institutions.
+4. Copying protected IP, brand identity, proprietary data, or copyrighted assets.
+5. Illegal, deceptive, fraudulent, or materially unethical customer acquisition.
+6. Required regulation, licensing, or professional liability is ignored.
+7. Customer harm from predictable AI errors cannot be controlled.
+8. The model depends on inaccessible, unlawfully obtained, or unstable data.
+9. The business requires more than **$25,000** before the first meaningful demand test without exceptional evidence.
+10. Gross margin is likely below **30%** after direct costs.
+11. Acquisition depends on virality, a single platform, or an unconfirmed partnership.
+12. The opportunity cannot be tested with a concrete offer within **14 days**.
+13. The main value proposition is a vague improvement with no measurable customer outcome.
+14. Evidence is fabricated, unverifiable, duplicated, or materially misrepresented.
+15. The opportunity requires customers to change behavior without a clear financial, operational, or emotional payoff.
+
+---
+
+# 5. 100-point scorecard
+
+A score does not override a failed mandatory gate or disqualifier.
+
+## A. Proven demand — 25 points
+
+| Criterion | Points |
+|---|---:|
+| 3+ paying competitors or 10+ relevant transactions | 8 |
+| Evidence of repeated or recurring need | 5 |
+| Clear pain, urgency, cost, or risk of inaction | 5 |
+| Evidence from at least 3 independent source types | 4 |
+| Recent evidence, with most activity within 24 months | 3 |
+
+**Minimum to pass: 15/25**
+
+---
+
+## B. Pricing and willingness to pay — 15 points
+
+| Criterion | Points |
+|---|---:|
+| Comparable prices documented from 3+ providers or transactions | 5 |
+| Proposed price tied to a specific buyer budget or current spend | 4 |
+| At least 3 qualified buyers show purchase intent at a stated price | 3 |
+| Repeat purchase, subscription, or expansion potential | 3 |
+
+**Minimum to pass: 9/15**
+
+---
+
+## C. Fulfillment and AI leverage — 20 points
+
+| Criterion | Points |
+|---|---:|
+| MVP deliverable can be produced within 14 days | 4 |
+| AI/automation reduces labor, time, or errors by at least 30% | 5 |
+| Workflow and required inputs are documented | 4 |
+| Human QA and failure handling are practical | 3 |
+| Delivery cost and quality are measurable | 4 |
+
+**Minimum to pass: 12/20**
+
+---
+
+## D. Distribution and acquisition — 20 points
+
+| Criterion | Points |
+|---|---:|
+| Specific reachable channel with evidence of target buyers | 5 |
+| 14-day acquisition test is defined | 5 |
+| Test can run for $500 or less | 3 |
+| Outreach, offer, and follow-up process are specified | 3 |
+| Acquisition economics have a plausible path to profitability | 4 |
+
+**Minimum to pass: 12/20**
+
+---
+
+## E. Unit economics and startup cost — 10 points
+
+| Criterion | Points |
+|---|---:|
+| Gross margin is projected at 50%+ | 3 |
+| First meaningful test costs less than $2,500 | 2 |
+| CAC recovery is plausible within 6 months or 3 purchases | 3 |
+| No large fixed investment is required before validation | 2 |
+
+**Minimum to pass: 6/10**
+
+---
+
+## F. Risk, legality, and repeatability — 10 points
+
+| Criterion | Points |
+|---|---:|
+| No material IP, legal, or regulatory exposure | 3 |
+| Data, platform, and supplier dependencies are controlled | 2 |
+| Offer can be standardized across customers | 3 |
+| Clear path to repeatable revenue rather than one-off work | 2 |
+
+**Minimum to pass: 6/10**
+
+---
+
+# 6. Decision classes
+
+## PASS
+
+An opportunity is **PASS** only if:
+
+- Total score is **70 or higher**.
+- All category minimums are met.
+- All mandatory gates pass.
+- No disqualifier applies.
+- The first validation test is specified and can begin within 14 days.
+
+## REJECT
+
+An opportunity is **REJECT** if:
+
+- Any mandatory gate fails.
+- Any disqualifier applies.
+- Total score is below 70.
+- Any category falls below its minimum.
+- Evidence is insufficient, stale, unverifiable, or materially contradictory.
+
+## HOLD — evidence incomplete
+
+“HOLD” is permitted only for missing research, not for weak evidence. The Researcher must specify:
+
+- Exact missing evidence.
+- Source or experiment needed.
+- Owner.
+- Deadline, no longer than 7 days.
+- Pass/fail threshold.
+
+If the evidence is not obtained by the deadline, the opportunity becomes **REJECT**.
+
+---
+
+# 7. Required Researcher submission format
+
+```yaml
+opportunity:
+  name:
+  one_sentence_offer:
+  target_buyer:
+  buyer_role:
+  problem:
+  measurable_outcome:
+  proposed_price:
+  purchase_frequency:
+  primary_channel:
+  validation_test:
+    duration_days:
+    budget:
+    audience_size:
+    offer:
+    success_threshold:
+    failure_threshold:
+
+evidence:
+  demand:
+    - source:
+      source_type:
+      date_collected:
+      date_of_activity:
+      tier: A|B|C|D
+      claim_proven:
+      limitation:
+  pricing:
+    - source:
+      comparable_offer:
+      price:
+      buyer_segment:
+      date:
+      tier:
+  fulfillment:
+    workflow:
+    required_inputs:
+    tools:
+    human_review:
+    estimated_minutes_per_customer:
+    direct_cost_per_customer:
+    automation_time_or_cost_reduction_percent:
+  distribution:
+    channel:
+    audience_source:
+    reachable_volume:
+    test_method:
+    expected_response_rate:
+    expected_paid_conversion_rate:
+    estimated_cac:
+
+economics:
+  selling_price:
+  direct_fulfillment_cost:
+  gross_margin_percent:
+  estimated_cac:
+  cac_payback_period:
+  startup_cost:
+  downside_case:
+
+risks:
+  legal:
+  regulatory:
+  ip:
+  data:
+  platform_dependency:
+  customer_harm:
+
+score:
+  demand: 0
+  pricing: 0
+  fulfillment: 0
+  distribution: 0
+  economics: 0
+  risk_repeatability: 0
+  total: 0
+
+gates:
+  specific_paying_customer: pass|fail
+  proven_demand: pass|fail
+  willingness_to_pay: pass|fail
+  unit_economics: pass|fail
+  fulfillment: pass|fail
+  distribution: pass|fail
+  legal_ip_safety: pass|fail
+  fast_validation_path: pass|fail
+
+disqualifiers:
+  present: true|false
+  items: []
+
+decision:
+  status: PASS|REJECT|HOLD
+  reason:
+```
+
+---
+
+# 8. Final machine-readable decision rule
+
+```python
+def decide(opportunity):
+    mandatory_gates = [
+        opportunity.gates.specific_paying_customer,
+        opportunity.gates.proven_demand,
+        opportunity.gates.willingness_to_pay,
+        opportunity.gates.unit_economics,
+        opportunity.gates.fulfillment,
+        opportunity.gates.distribution,
+        opportunity.gates.legal_ip_safety,
+        opportunity.gates.fast_validation_path,
+    ]
+
+    minimum_scores = {
+        "demand": 15,
+        "pricing": 9,
+        "fulfillment": 12,
+        "distribution": 12,
+        "economics": 6,
+        "risk_repeatability": 6,
+    }
+
+    critical_evidence_present = (
+        at_least_one_tier_A_demand_or_pricing_signal(opportunity)
+        and evidence_is_verifiable(opportunity)
+        and evidence_is_not_materially_stale(opportunity)
+    )
+
+    if opportunity.disqualifiers.present:
+        return "REJECT"
+
+    if any(gate != "pass" for gate in mandatory_gates):
+        return "REJECT"
+
+    if not critical_evidence_present:
+        return "REJECT"
+
+    if opportunity.score.total < 70:
+        return "REJECT"
+
+    for category, minimum in minimum_scores.items():
+        if opportunity.score[category] < minimum:
+            return "REJECT"
+
+    if not validation_test_can_start_within_14_days(opportunity):
+        return "REJECT"
+
+    return "PASS"
+```
+
+The Manager should not advance a **PASS** opportunity to execution without the documented validation test, owner, budget, offer, and success threshold.
