@@ -49,9 +49,14 @@ PASS only if the package:
 - includes a concrete paid pilot with price, duration, scope, and limits,
 - includes real identity/contact details,
 - includes a practical booking method,
+- includes a customer acceptance/approval step,
+- includes a defined payment-selection and payment-confirmation process,
+- includes a prospect-source / opt-out / message-approval procedure,
+- includes a concrete identity/trust upgrade checklist,
 - includes a basic data-handling procedure,
 - includes basic pilot commercial terms as a draft requiring human approval before use,
 - includes an internal test plan using fictional data,
+- includes dry-run checks for workflow access, routing, alerts, data deletion/export, and failure handling,
 - reduces sketch-factor,
 - can be implemented quickly and cheaply,
 - avoids fake claims and overbuilding.
@@ -233,6 +238,89 @@ Keep it short. Do not pretend this is legal advice or a final contract.
     context + "\n\nPILOT:\n" + pilot
   );
 
+  const acceptance = await ask(
+    `
+You are the Pilot Acceptance Designer.
+Create a short acceptance form / approval email template for a founding pilot.
+
+It must capture:
+- customer legal/business name
+- authorized contact name + email
+- launch date
+- 30-day term
+- exact scope
+- $199 price
+- payment timing
+- cancellation/end-of-pilot terms
+- approved communication channels
+- acknowledgement that the service is an early-stage pilot
+- explicit acceptance line the customer can reply with
+
+Label it: DRAFT — HUMAN APPROVAL REQUIRED BEFORE CUSTOMER USE.
+Do not invent legal guarantees.
+`,
+    context + "\n\nPILOT:\n" + pilot + "\n\nTERMS:\n" + terms
+  );
+
+  const payment = await ask(
+    `
+You are the Payment Process Designer.
+Create the minimum payment process for the $199 pilot.
+
+Return:
+- recommended payment method categories (invoice/payment-link/bank transfer) without inventing an account or processor we do not have
+- when payment is due
+- what evidence of payment is stored
+- who confirms payment
+- refund/cancellation handling workflow
+- exact manual checklist before activation
+
+If a processor must still be selected, say so explicitly and mark that as a pre-launch task.
+`,
+    context + "\n\nPILOT:\n" + pilot
+  );
+
+  const outreachControls = await ask(
+    `
+You are the Outreach Compliance and Approval Designer.
+Create a written prospect-list and message-approval procedure.
+
+Must include:
+- only customer-provided, publicly listed business contacts, or otherwise permissioned business contacts
+- record source URL/source type and date collected
+- record opt-out/unsubscribe status
+- suppress opted-out contacts from future sends
+- do not buy or scrape restricted/private contact data
+- who approves message templates
+- how approval is recorded
+- how changes to a template trigger re-approval
+- how to stop outreach immediately if there is a complaint or compliance concern
+
+Do not claim legal compliance certification.
+`,
+    context
+  );
+
+  const trustPlan = await ask(
+    `
+You are the Trust Setup Designer.
+Create the minimum identity/trust upgrade plan before the next outreach batch.
+
+Must include:
+- current honest identity: Brandon / ComfortRelay / comfortrelayohio@gmail.com
+- simple one-page website
+- one logo
+- a domain and domain-based email as the preferred upgrade, clearly marked as NOT YET ACQUIRED if that is true
+- booking method
+- privacy/data-handling page or section
+- pilot terms link or attachment process
+- no fake address, phone, testimonials, client logos, or staff
+
+Return a checklist in implementation order.
+`,
+    context
+  );
+
   const identity = await ask(
     `
 You are the Sales Identity Specialist.
@@ -323,6 +411,22 @@ ${dataPolicy}
 
 ${terms}
 
+=== PILOT ACCEPTANCE ===
+
+${acceptance}
+
+=== PAYMENT PROCESS ===
+
+${payment}
+
+=== OUTREACH CONTROLS ===
+
+${outreachControls}
+
+=== TRUST UPGRADE PLAN ===
+
+${trustPlan}
+
 === EMAIL IDENTITY + OUTREACH ===
 
 ${identity}
@@ -365,7 +469,7 @@ Rules:
   updateTask(id, {
     status: passed ? "done" : "review",
     nextAction: passed
-      ? "Implement the approved website/logo/email identity and run the fictional-data QA checklist before the first pilot."
+      ? "Implement the approved trust checklist, select/document payment method, obtain human/legal review of commercial terms, and run the fictional-data QA checklist before the first pilot."
       : "Human review required: remaining blockers are listed in the final review.",
     managerDecision: passed ? "PASS" : "REJECT",
     outputFile: "control/outputs/T-005-comfortrelay-credibility-package.txt",
