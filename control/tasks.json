@@ -49,6 +49,17 @@
       "successCondition": "Experiments can be compared using spend, replies, conversations, pilots, revenue, and time.",
       "nextAction": "Define scorecard fields and kill/continue/scale rules.",
       "costLimitUsd": 1
+    },
+    {
+      "id": "T-005",
+      "title": "ComfortRelay credibility sprint",
+      "department": "Factory",
+      "owner": "manager",
+      "status": "inbox",
+      "experiment": "HVAC Lead Rescue",
+      "successCondition": "Produce a reviewer-approved credibility package containing a brand direction, logo brief, one-page website copy, sender identity guidance, and improved outreach style that makes ComfortRelay look legitimate without overbuilding.",
+      "nextAction": "Manager delegates brand, website, email-identity, and QA work, then saves the approved package.",
+      "costLimitUsd": 3
     }
   ]
 }
