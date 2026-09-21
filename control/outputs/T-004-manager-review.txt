@@ -1,0 +1,3 @@
+PASS
+
+It tracks both financial metrics (spend, revenue, gross profit, margin) and real-world traction (replies, qualified conversations, demos, payments, distribution, pain, and fulfillment). It includes concrete kill, continue, and scale rules; stage budget caps and time caps; human approval gates; explicit protection of a $200 runway with an $80 reserve; and an explicit sunk-cost prohibition. Its staged structure and reusable definitions make it applicable across different business experiments.

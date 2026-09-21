@@ -1,0 +1,182 @@
+# SCORECARD
+
+**Experiment name:**  
+**Hypothesis:**  
+**Target customer/persona:**  
+**Offer and price:**  
+**Primary acquisition channel:**  
+**Start/end date:**  
+**Owner:**  
+**Next decision date:**  
+
+### Required metrics
+
+| Metric | Actual | Default target |
+|---|---:|---:|
+| Cash spend | $ | ≤ approved cap |
+| API/software spend | $ | Included in cash spend |
+| Founder/operator time | hours | ≤ 10 hours before first decision |
+| Prospects reached | # | ≥ 30 for initial outreach test |
+| Replies | # / reply rate | ≥ 3 replies or ≥10% |
+| Qualified conversations | # / qualification rate | ≥ 2 |
+| Demos or offer presentations | # | ≥ 1–2 |
+| Paid pilots/customers | # | ≥ 1 |
+| Revenue collected | $ | Any payment is positive evidence |
+| Gross profit | $ and % | Positive; preferably ≥60% |
+| Fulfillment time per customer | hours | ≤ 4 hours initially |
+| Fulfillment difficulty | 1–5 | ≤3 to continue; ≤2 to scale |
+| Evidence quality | 1–5 | ≥3 to continue; ≥4 to scale |
+| Distribution traction | 1–5 | ≥3 to continue; ≥4 to scale |
+| Customer pain urgency | 1–5 | ≥3 to continue |
+| Main objections | Text/count | Logged after every conversation |
+| Decision | Kill / Continue / Scale | Required |
+| Next test | Text | Required if continuing |
+
+### Definitions
+
+- **Qualified conversation:** Target buyer confirms the problem, has a plausible budget, and agrees the proposed outcome matters.
+- **Paid pilot/customer:** Money is collected, not merely promised.
+- **Evidence quality:**
+  - 1 = opinion or personal intuition
+  - 2 = likes, clicks, or vague interest
+  - 3 = relevant buyer conversation and specific pain
+  - 4 = repeated pain plus commitment, referral, or access to data/workflow
+  - 5 = payment, renewal, or multiple paying customers
+- **Distribution traction:**
+  - 1 = no reliable channel
+  - 2 = manual outreach only with weak response
+  - 3 = repeatable access and ≥10% response rate
+  - 4 = referrals, inbound, partnerships, or ≥20% response rate
+  - 5 = predictable acquisition at acceptable cost
+
+# DEFAULT BUDGETS
+
+These are **maximums, not spending targets**.
+
+| Stage | Purpose | Default cash/API/software cap | Time cap |
+|---|---|---:|---:|
+| Research | Customer/problem discovery, list building, outreach setup | **$20** | 4 hours |
+| Prototype/demo | Manual mockup, sample output, lightweight workflow | **$40** | 8 hours |
+| Validation | Paid pilot, delivery, and conversion test | **$60** | 12 hours |
+| Contingency/reserve | Protected runway | **$80** | — |
+
+**Total default allocation: $200.**
+
+No experiment may automatically consume the reserve. Unused budget from a killed experiment returns to the reserve.
+
+Spending must be incremental: research first, then prototype, then validation. Do not build a full product before payment evidence.
+
+# KILL RULES
+
+Kill or pause the experiment immediately when any of these apply:
+
+1. **Zero replies after 30 targeted prospects** or after two materially different messages to the same audience.
+2. **Fewer than 3 replies from 40 targeted prospects** unless at least one reply is a highly qualified buying signal.
+3. **Zero qualified conversations after 5 replies** or 10 conversations.
+4. **No demo request or concrete next step after 3 qualified conversations.**
+5. **No paid pilot after 5 qualified conversations or 3 demos**, unless the offer, audience, or price is being explicitly renegotiated.
+6. **No payment commitment after spending the approved stage budget.**
+7. **Gross profit is negative** or expected gross margin is below 40% after one delivery cycle.
+8. **Fulfillment requires more than 8 hours per customer**, recurring custom work, or undocumented manual intervention.
+9. **Fulfillment difficulty is 4–5/5** without a credible simplification plan.
+10. **Evidence quality remains 1–2/5** after the research stage.
+11. The test depends on unverified assumptions and the team cannot state what evidence would change the decision.
+12. Time or spend exceeds the approved cap by more than 20% without approval.
+
+Time already spent is **sunk cost** and is not a reason to continue.
+
+# CONTINUE RULES
+
+Continue only when the experiment produces enough evidence for a specific next test:
+
+- At least **30 targeted prospects reached**.
+- At least **3 replies or a 10% reply rate**.
+- At least **2 qualified conversations**.
+- At least **one concrete buying signal**: requested demo, proposal, trial, data access, referral, or price discussion.
+- Evidence quality is **≥3/5**.
+- Fulfillment is feasible at **≤4 hours per customer**.
+- Expected gross margin is **≥60%**, or there is a documented path to reach it.
+- Spend is within the current stage cap.
+- The next experiment has one clear change: audience, message, offer, price, channel, or delivery method.
+
+A continuation gets only the **next stage’s budget**, not the full remaining runway.
+
+# SCALE RULES
+
+Scale only after real payment evidence:
+
+1. At least **2 paying customers or paid pilots**, or one customer with a meaningful repeat/renewal.
+2. At least **$200 collected revenue** or a documented path to that amount within the next two sales.
+3. Gross margin is **≥60%** after including API, software, contractor, and fulfillment costs.
+4. Fulfillment difficulty is **≤2/5** and delivery is repeatable.
+5. Fulfillment time is **≤4 hours per customer**, with a plan to reduce it.
+6. Evidence quality is **≥4/5**.
+7. Distribution traction is **≥3/5**, with at least one repeatable acquisition source.
+8. The next dollar spent has a measurable purpose and expected payback.
+9. No scale spend exceeds **$40** without human approval.
+
+Scaling means repeating a proven sale or delivery motion—not building more features by default.
+
+# HUMAN APPROVAL GATES
+
+Human approval is required before:
+
+- Any spend above **$20** on a new experiment.
+- Moving from research to prototype.
+- Moving from prototype to validation.
+- Any recurring software/API subscription.
+- Any single purchase above **$25**.
+- Any experiment exceeding **$60 total spend**.
+- Using contingency/reserve funds.
+- Hiring contractors or giving external parties customer data.
+- Continuing after a kill rule is triggered.
+- Changing price, target customer, or offer in a way that materially changes the hypothesis.
+
+The approval request must state:
+
+1. Spend requested.
+2. Evidence collected so far.
+3. Expected learning or revenue outcome.
+4. Kill condition.
+5. Remaining total runway.
+
+# MANAGER DECISION RULE
+
+Use this sequence:
+
+### 1. Apply hard gates first
+
+- **Payment, positive gross profit, feasible fulfillment:** eligible for scale.
+- **Qualified interest but no payment:** continue only with one tightly scoped conversion test.
+- **No meaningful interest, weak evidence, or expensive fulfillment:** kill.
+- **Any budget breach:** pause until approved.
+
+### 2. Calculate the experiment score
+
+\[
+\text{Experiment Score} =
+2(\text{Revenue Evidence}) +
+1.5(\text{Demand Evidence}) +
+1(\text{Distribution}) +
+1(\text{Gross Profit}) -
+1.5(\text{Fulfillment Difficulty}) -
+(\text{Spend}/\text{Stage Cap})
+\]
+
+Rate each positive category from 0–5:
+
+- **Revenue Evidence:** payment and repeat purchase
+- **Demand Evidence:** qualified conversations and buying signals
+- **Distribution:** reply rate and repeatable access
+- **Gross Profit:** margin and delivery economics
+- **Fulfillment Difficulty:** 0 = easy, 5 = very difficult
+
+### 3. Decision thresholds
+
+- **Scale:** Score **≥12**, payment evidence exists, and all scale rules pass.
+- **Continue:** Score **7–11.9**, with at least one qualified buying signal and no hard kill rule.
+- **Kill:** Score **<7**, zero meaningful buying signals after the required sample, or any hard kill rule.
+
+### Runway protection rule
+
+Always preserve at least **$80 of the $200 total budget** until an experiment has produced payment evidence. Before payment, no experiment may spend more than **$60 total**, and total committed spend across all experiments may not exceed **$120**. The remaining **$80 is protected reserve** and requires explicit human approval.

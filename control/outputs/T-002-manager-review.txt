@@ -1,0 +1,3 @@
+PASS
+
+The rubric uses measurable evidence, explicit rejection gates and disqualifiers, covers demand, pricing, fulfillment, distribution, legality, and economics, and provides a practical 100-point scoring system plus a machine-readable decision rule. It is sufficiently specific for the Researcher to apply to the next opportunity.
